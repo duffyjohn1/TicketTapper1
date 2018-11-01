@@ -1,0 +1,46 @@
+# School of Computing
+CA326 Year 3 Project Proposal Form
+
+**SECTION A**
+
+Project Title Ticket Tapper
+
+Student 1 Name Michael\_Solan        ID Number 15470992
+
+Student 2 Name John Duffy        ID Number 15424962
+
+Staff Member Consulted Mark Roantree
+
+Project Description (1-2 pages):
+
+1.      Description – The objective of our project is to design a train and bus 
+        system using near-field communication. The main function of our app is 
+        for the consumer to select a route on the app then you would use the near-field 
+        communication to purchase a ticket and it would return an electronic 
+        receipt showing proof of payment. Our target user is someone who regularly 
+        uses public transport who wants to be able to use their phone as a 
+        method of payment and people who wouldn&#39;t be familiar with the transportation 
+        system in a different country. For example, if a tourist was to come to 
+        Dublin they would be able to purchase a bus ticket using this app instead
+        of the frustrating search for change or the effort of obtaining a leap card. 
+        Some of our main challenges with this app idea is connecting our app to a 
+        real-time database. We hope by using Firebase it will allow our application
+        data to be synchronized across clients and stored on Firebase 
+        cloud. Another problem is testing but by purchasing NFC cards online we 
+        hope to be able to mimic the scanning of your phone on a bus therefore 
+        being able to see if our app is functional. By using flutter, we expect 
+        this app to be designed for both IOS and android greatly increasing our 
+        client base and make our app more usable to the public. We plan on testing 
+        our app by purchasing near-field communication tags off the internet which 
+        can be programmed to serve as a NFC reader that you would find on a Dublin 
+        bus and we can therefore test the effectiveness of our application.
+
+2.        Programming language(s) – Dart, Java
+
+3.        Programming tool(s) – Flutter, Firebase, Android Studio
+
+4.        Learning Challenges – We will have to learn Dart, Flutter, how to use Firebase, how to implement API&#39;s, how to use Android Studio and using NFC software
+
+5.        Hardware / software platform – Windows 10 and Ubuntu
+
+6.        Special hardware / software requirements – NFC tags
