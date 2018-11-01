@@ -5,7 +5,7 @@ CA326 Year 3 Project Proposal Form
 
 Project Title Ticket Tapper
 
-Student 1 Name Michael\_Solan        ID Number 15470992
+Student 1 Name Michael Solan        ID Number 15470992
 
 Student 2 Name John Duffy        ID Number 15424962
 
@@ -35,12 +35,13 @@ Project Description (1-2 pages):
         can be programmed to serve as a NFC reader that you would find on a Dublin 
         bus and we can therefore test the effectiveness of our application.
 
-2.        Programming language(s) – Dart, Java
+2.      Programming language(s) – Dart, Java
 
-3.        Programming tool(s) – Flutter, Firebase, Android Studio
+3.      Programming tool(s) – Flutter, Firebase, Android Studio
 
-4.        Learning Challenges – We will have to learn Dart, Flutter, how to use Firebase, how to implement API&#39;s, how to use Android Studio and using NFC software
+4.      Learning Challenges – We will have to learn Dart, Flutter, how to use 
+        Firebase, how to implement API&#39;s, how to use Android Studio and using NFC software
 
-5.        Hardware / software platform – Windows 10 and Ubuntu
+5.       Hardware / software platform – Windows 10 and Ubuntu
 
-6.        Special hardware / software requirements – NFC tags
+6.       Special hardware / software requirements – NFC tags
