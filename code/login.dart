@@ -19,6 +19,7 @@ class LoginPage extends StatelessWidget {
           backgroundColor:Colors.transparent,
           elevation: 0.0,
           iconTheme: new IconThemeData(color: Color(0xFF18D191))),
+          resizeToAvoidBottomPadding: false,
       body: Container(
         width: double.infinity,
         child: new Column(
