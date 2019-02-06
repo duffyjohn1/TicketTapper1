@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
           ),
           new BottomNavigationBarItem(
               title: new Text(''),
-              icon: new Icon(Icons.local_offer)
+              icon: new Icon(Icons.directions_bus)
           ),
           new BottomNavigationBarItem(
               title: new Text(''),
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
           ),
           new BottomNavigationBarItem(
               title: new Text(''),
-              icon: new Icon(Icons.notifications)
+              icon: new Icon(Icons.all_out)
           )
 
         ],
@@ -72,18 +72,22 @@ class MainContent extends StatelessWidget {
                     ],
                   ),
                   new SizedBox(
-                    height: 10.0,
+                    height: 20.0,
                   ),
                   Row(
                     children: <Widget>[
+
+                      new SizedBox(
+                        height:10.0,
+                      ),
+
                       new Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.only(right: 5.0),
-                            child: new Container(
+                          child: new Container(
                               height: 100.0,
                               decoration: new BoxDecoration(
-                                  borderRadius: new BorderRadius.circular(5.0),
-                                  color: Color(0xFFFD7384)),
+                                  borderRadius: new BorderRadius.circular(20.0),
+                                  color: Color(0xFFDF513B)
+                              ),
                               child: new Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
@@ -92,80 +96,75 @@ class MainContent extends StatelessWidget {
                                     color: Colors.black,
                                   ),
                                   new Text("Pay",
-                                      style: new TextStyle(color: Colors.white))
+                                      style:new TextStyle(color: Colors.white))
                                 ],
-                              ),
-                            ),
-                          )),
-                      new Expanded(
-                          child: new Container(
-                            height: 100.0,
-                            child: Column(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Padding(
-                                    padding:
-                                    const EdgeInsets.only(bottom: 2.5, right: 2.5),
-                                    child: new Container(
-                                      decoration: new BoxDecoration(
-                                          color: Color(0XFF2BD093),
-                                          borderRadius: new BorderRadius.circular(5.0)),
-                                      child: new Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding: const EdgeInsets.only(right: 8.0),
-                                            child: new Icon(
-                                              Icons.directions_bus,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                          new Text('Timetable',
-                                              style: new TextStyle(color: Colors.white))
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                              )
+                          )
+                      )
+                    ]),
+                  new SizedBox(
+                    height:20.0,
+                  ),
+                  Row(
+                    children: <Widget>[
 
-                              ],
-                            ),
-                          )),
-                      new Expanded(
-                          child: new Container(
-                            height: 100.0,
-                            child: Column(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Padding(
-                                    padding:
-                                    const EdgeInsets.only(left: 2.5, bottom: 2.5),
-                                    child: new Container(
-                                      decoration: new BoxDecoration(
-                                          color: Color(0XFF53CEDB),
-                                          borderRadius: new BorderRadius.circular(5.0)),
-                                      child: new Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding: const EdgeInsets.only(right: 8.0),
-                                            child: new Icon(
-                                              Icons.map,
-                                              color: Colors.black,
-                                            ),
-                                          ),
-                                          new Text('Plan Root',
-                                              style: new TextStyle(color: Colors.white))
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                      new SizedBox(
+                        height: 10.0,
+                      ),
 
-                              ],
-                            ),
-                          )),
-                    ],
+                      new Expanded(
+                        child: new Container(
+                          height: 100.0,
+                          decoration: new BoxDecoration(
+                            borderRadius: new BorderRadius.circular(20.0),
+                            color: Color(0xFF18D191)
+                          ),
+                          child: new Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              new Icon(
+                                  Icons.map,
+                                  color: Colors.black,
+                              ),
+                              new Text("Plan Route",
+                                  style:new TextStyle(color: Colors.white))
+                            ],
+                        )
+                        )
+                      )
+                    ]
+                  ),
+                  new SizedBox(
+                    height: 20.0,
+                  ),
+                  Row(
+                      children: <Widget>[
+
+                        new SizedBox(
+                          height: 10.0,
+                        ),
+
+                        new Expanded(
+                            child: new Container(
+                                height: 100.0,
+                                decoration: new BoxDecoration(
+                                    borderRadius: new BorderRadius.circular(20.0),
+                                    color: Color(0xFFFFCE56)
+                                ),
+                                child: new Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Icon(
+                                      Icons.directions_bus,
+                                      color: Colors.black,
+                                    ),
+                                    new Text("Timetable",
+                                        style:new TextStyle(color: Colors.white))
+                                  ],
+                                )
+                            )
+                        )
+                      ]
                   ),
                   new SizedBox(
                     height: 15.0,
@@ -173,15 +172,17 @@ class MainContent extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       new Expanded(
-                          child: new Text("Popular Trending",
-                              style: new TextStyle(fontSize: 18.0))),
+                        child: new Text("Dublin Attractions",
+                          style: new TextStyle(fontSize: 18.0))),
                       new Expanded(
-                          child: new Text(
-                            "View All",
-                            style: new TextStyle(color: Color(0XFF2BD093)),
-                            textAlign: TextAlign.end,
-                          ))
-                    ],
+                        child: new Text(
+                          "Dublin, Ireland",
+                          style: new TextStyle(color: Color(0XFF2BD093)),
+                          textAlign: TextAlign.end,
+                        ),
+
+                      )
+                    ]
                   ),
                   new SizedBox(
                     height: 10.0,
@@ -199,11 +200,11 @@ class MainContent extends StatelessWidget {
                                     borderRadius: new BorderRadius.circular(5.0),
                                     image: new DecorationImage(
                                         image: new NetworkImage(
-                                            'https://www.howtogeek.com/wp-content/uploads/2016/01/steam-and-xbox-controllers.jpg'),
+                                            'https://cdn.getyourguide.com/img/tour_img-472363-146.jpg'),
                                         fit: BoxFit.cover)),
                               ),
                               new Text(
-                                "Play Station",
+                                "Guiness Storehouse",
                                 style: new TextStyle(fontSize: 16.0),
                                 textAlign: TextAlign.center,
                               )
@@ -225,10 +226,10 @@ class MainContent extends StatelessWidget {
                                     borderRadius: new BorderRadius.circular(5.0),
                                     image: new DecorationImage(
                                         image: new NetworkImage(
-                                            'https://pawanjewellers.in/wp-content/uploads/2016/09/Jewellery-new.jpg'),
+                                            'https://cache-graphicslib.viator.com/graphicslib/page-images/742x525/135095_Dublin_DublinCastle_683.jpg'),
                                         fit: BoxFit.cover)),
                               ),
-                              new Text("Jewellery and Watches ",
+                              new Text("Dublin Castle",
                                   style: new TextStyle(fontSize: 16.0),
                                   textAlign: TextAlign.center)
                             ],
@@ -249,10 +250,10 @@ class MainContent extends StatelessWidget {
                                     borderRadius: new BorderRadius.circular(5.0),
                                     image: new DecorationImage(
                                         image: new NetworkImage(
-                                            'http://images4.fanpop.com/image/photos/21600000/Electronics-hd-wallpaper-21627626-1920-1200.jpg'),
+                                            'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Long_Room_Interior%2C_Trinity_College_Dublin%2C_Ireland_-_Diliff.jpg/1200px-Long_Room_Interior%2C_Trinity_College_Dublin%2C_Ireland_-_Diliff.jpg'),
                                         fit: BoxFit.cover)),
                               ),
-                              new Text('Electronics',
+                              new Text('Trinity College Library',
                                   style: new TextStyle(fontSize: 16.0),
                                   textAlign: TextAlign.center)
                             ],
@@ -261,194 +262,9 @@ class MainContent extends StatelessWidget {
                       )
                     ],
                   ),
-                  new SizedBox(
-                    height: 15.0,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      new Expanded(
-                          child: new Text("Popular Trending",
-                              style: new TextStyle(fontSize: 18.0))),
-                      new Expanded(
-                          child: new Text(
-                            "View All",
-                            style: new TextStyle(color: Color(0XFF2BD093)),
-                            textAlign: TextAlign.end,
-                          ))
-                    ],
-                  ),
-                  new SizedBox(
-                    height: 10.0,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      new Expanded(
-                        child: Container(
-                          height: 150.0,
-                          child: new Column(
-                            children: <Widget>[
-                              new Container(
-                                height: 100.0,
-                                decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(5.0),
-                                    image: new DecorationImage(
-                                        image: new NetworkImage(
-                                            'https://s1.cdn.autoevolution.com/images/gallery/LEXUS-HS-250h-3892_26.jpg'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              new Text(
-                                "Motors",
-                                style: new TextStyle(fontSize: 16.0),
-                                textAlign: TextAlign.center,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      new SizedBox(
-                        width: 5.0,
-                      ),
-                      new Expanded(
-                        child: Container(
-                          height: 150.0,
-                          child: new Column(
-                            children: <Widget>[
-                              new Container(
-                                height: 100.0,
-                                decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(5.0),
-                                    image: new DecorationImage(
-                                        image: new NetworkImage(
-                                            'https://d3tvpxjako9ywy.cloudfront.net/blog/content/uploads/2015/03/company-culture-why-it-matters.jpg?av=6219bb831e993c907ca622baef062556'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              new Text("Jobs",
-                                  style: new TextStyle(fontSize: 16.0),
-                                  textAlign: TextAlign.center)
-                            ],
-                          ),
-                        ),
-                      ),
-                      new SizedBox(
-                        width: 5.0,
-                      ),
-                      new Expanded(
-                        child: Container(
-                          height: 150.0,
-                          child: new Column(
-                            children: <Widget>[
-                              new Container(
-                                height: 100.0,
-                                decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(5.0),
-                                    image: new DecorationImage(
-                                        image: new NetworkImage(
-                                            'http://images4.fanpop.com/image/photos/21600000/Electronics-hd-wallpaper-21627626-1920-1200.jpg'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              new Text('Electronics',
-                                  style: new TextStyle(fontSize: 16.0),
-                                  textAlign: TextAlign.center)
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  new SizedBox(
-                    height: 15.0,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      new Expanded(
-                          child: new Text("Popular Trending",
-                              style: new TextStyle(fontSize: 18.0))),
-                      new Expanded(
-                          child: new Text(
-                            "View All",
-                            style: new TextStyle(color: Color(0XFF2BD093)),
-                            textAlign: TextAlign.end,
-                          ))
-                    ],
-                  ),
-                  new SizedBox(
-                    height: 10.0,
-                  ),
-                  Row(
-                    children: <Widget>[
-                      new Expanded(
-                        child: Container(
-                          height: 150.0,
-                          child: new Column(
-                            children: <Widget>[
-                              new Container(
-                                height: 100.0,
-                                decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(5.0),
-                                    image: new DecorationImage(
-                                        image: new NetworkImage(
-                                            'https://www.howtogeek.com/wp-content/uploads/2016/01/steam-and-xbox-controllers.jpg'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              new Text(
-                                "Play Station",
-                                style: new TextStyle(fontSize: 16.0),
-                                textAlign: TextAlign.center,
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      new SizedBox(
-                        width: 5.0,
-                      ),
-                      new Expanded(
-                        child: Container(
-                          height: 150.0,
-                          child: new Column(
-                            children: <Widget>[
-                              new Container(
-                                height: 100.0,
-                                decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(5.0),
-                                    image: new DecorationImage(
-                                        image: new NetworkImage(
-                                            'https://pawanjewellers.in/wp-content/uploads/2016/09/Jewellery-new.jpg'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              new Text("Jewellery and Watches ",
-                                  style: new TextStyle(fontSize: 16.0),
-                                  textAlign: TextAlign.center)
-                            ],
-                          ),
-                        ),
-                      ),
-                      new SizedBox(
-                        width: 5.0,
-                      ),
-                      new Expanded(
-                        child: Container(
-                          height: 150.0,
-                          child: new Column(
-                            children: <Widget>[
-                              new Container(
-                                height: 100.0,
-                                decoration: new BoxDecoration(
-                                    borderRadius: new BorderRadius.circular(5.0),
-                                    image: new DecorationImage(
-                                        image: new NetworkImage(
-                                            'http://images4.fanpop.com/image/photos/21600000/Electronics-hd-wallpaper-21627626-1920-1200.jpg'),
-                                        fit: BoxFit.cover)),
-                              ),
-                              new Text('Electronics',
-                                  style: new TextStyle(fontSize: 16.0),
-                                  textAlign: TextAlign.center)
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  )
+
+
+
                 ],
               )),
         )
