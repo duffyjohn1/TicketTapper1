@@ -63,7 +63,7 @@ class MainContent extends StatelessWidget {
                   Row(
                     children: <Widget>[
                       new Text(
-                        "Explore",
+                        "Ticket Tapper",
                         style: new TextStyle(
                           fontSize: 30.0,
                         ),
@@ -88,10 +88,10 @@ class MainContent extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: <Widget>[
                                   new Icon(
-                                    Icons.drive_eta,
-                                    color: Colors.white,
+                                    Icons.euro_symbol,
+                                    color: Colors.black,
                                   ),
-                                  new Text("Motor",
+                                  new Text("Pay",
                                       style: new TextStyle(color: Colors.white))
                                 ],
                               ),
@@ -116,42 +116,18 @@ class MainContent extends StatelessWidget {
                                           Padding(
                                             padding: const EdgeInsets.only(right: 8.0),
                                             child: new Icon(
-                                              Icons.local_offer,
-                                              color: Colors.white,
+                                              Icons.directions_bus,
+                                              color: Colors.black,
                                             ),
                                           ),
-                                          new Text('Classified',
+                                          new Text('Timetable',
                                               style: new TextStyle(color: Colors.white))
                                         ],
                                       ),
                                     ),
                                   ),
                                 ),
-                                Expanded(
-                                  child: Padding(
-                                    padding:
-                                    const EdgeInsets.only(top: 2.5, right: 2.5),
-                                    child: new Container(
-                                      decoration: new BoxDecoration(
-                                          color: Color(0XFFFC7B4D),
-                                          borderRadius: new BorderRadius.circular(5.0)),
-                                      child: new Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding: const EdgeInsets.only(right: 8.0),
-                                            child: new Icon(
-                                              Icons.beenhere,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                          new Text('Service',
-                                              style: new TextStyle(color: Colors.white))
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+
                               ],
                             ),
                           )),
@@ -174,41 +150,18 @@ class MainContent extends StatelessWidget {
                                           Padding(
                                             padding: const EdgeInsets.only(right: 8.0),
                                             child: new Icon(
-                                              Icons.account_balance,
-                                              color: Colors.white,
+                                              Icons.map,
+                                              color: Colors.black,
                                             ),
                                           ),
-                                          new Text('Properties',
+                                          new Text('Plan Root',
                                               style: new TextStyle(color: Colors.white))
                                         ],
                                       ),
                                     ),
                                   ),
                                 ),
-                                Expanded(
-                                  child: Padding(
-                                    padding: const EdgeInsets.only(left: 2.5, top: 2.5),
-                                    child: new Container(
-                                      decoration: new BoxDecoration(
-                                          color: Color(0XFFF1B069),
-                                          borderRadius: new BorderRadius.circular(5.0)),
-                                      child: new Row(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Padding(
-                                            padding: const EdgeInsets.only(right: 8.0),
-                                            child: new Icon(
-                                              Icons.art_track,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                          new Text('Jobs',
-                                              style: new TextStyle(color: Colors.white))
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
+
                               ],
                             ),
                           )),
