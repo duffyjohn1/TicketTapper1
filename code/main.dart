@@ -1,6 +1,9 @@
+// Should probably make a welcome page and keep main small
+
 import 'package:flutter/material.dart';
 import 'login.dart';
-
+import 'signup.dart';
+import 'googleLogin.dart';
 
 void main() => runApp(TicketTapper());
 
@@ -66,7 +69,6 @@ class MyHomePage extends StatelessWidget {
                     color: Colors.black,
                   ),
                 ),
-
               ],
             ),
             new Row(
@@ -90,9 +92,11 @@ class MyHomePage extends StatelessWidget {
                         left: 20.0, right: 20.0, top: 10.0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => LoginPage(),
-                        ));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LoginPage(),
+                            ));
                       },
                       child: new Container(
                           alignment: Alignment.center,
@@ -111,11 +115,19 @@ class MyHomePage extends StatelessWidget {
             new Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
                         left: 20.0, right: 20.0, top: 10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => GoogleLogin(),
+                            ));
+                      },
+
                     child: new Container(
                         alignment: Alignment.center,
                         height: 60.0,
@@ -125,6 +137,31 @@ class MyHomePage extends StatelessWidget {
                         child: new Text("Google",
                             style: new TextStyle(
                                 fontSize: 20.0, color: Colors.white))),
+                      ),
+                      ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 20.0, right: 20.0, top: 10.0),
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => SignUpPage(),
+                            ));
+                      },
+                      child: new Container(
+                          alignment: Alignment.center,
+                          height: 60.0,
+                          decoration: new BoxDecoration(
+                              color: Color(0xFFFFCE56),
+                              borderRadius: new BorderRadius.circular(9.0)),
+                          child: new Text("New Account",
+                              style: new TextStyle(
+                                  fontSize: 20.0, color: Colors.white))),
+                    ),
                   ),
                 )
               ],
