@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'signup.dart';
-import 'googleLogin.dart';
+import 'google_signIn.dart';
 
 void main() => runApp(TicketTapper());
 
@@ -121,11 +121,8 @@ class MyHomePage extends StatelessWidget {
                         left: 20.0, right: 20.0, top: 10.0),
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => GoogleLogin(),
-                            ));
+                        handleSignIn();
+
                       },
 
                     child: new Container(
