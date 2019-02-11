@@ -22,7 +22,7 @@ class  _LoginPageState extends State<LoginPage> {
 
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
       statusBarColor: Colors.orange, //or set color with: Color(0xFF0000FF)
-      ));
+    ));
 
     return new Scaffold(
       appBar: new AppBar(
@@ -43,83 +43,91 @@ class  _LoginPageState extends State<LoginPage> {
                   child: new Text(
                     "Ticket Tapper",
                     style: new TextStyle(fontSize: 30.0),
-                    ),
-                  )
+                  ),
+                )
               ],
-              ),
+            ),
+            Expanded(
+                child: new Form(
+                    key: _formKey,
+                    child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding:
+                            const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
 
-            new Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 20.0, right: 5.0, top: 250.0),
-                    child: GestureDetector(
-                      onTap: signIn,
-                      child: new Container(
-                          alignment: Alignment.center,
-                          height: 60.0,
-                          decoration: new BoxDecoration(
-                              color: Color(0xFF18D191),
-                              borderRadius: new BorderRadius.circular(9.0)),
-                          child: new Text("Login",
-                                              style: new TextStyle(
-                                                  fontSize: 20.0, color: Colors.white))),
-                      ),
-                    ),
-                  ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10.0, right: 20.0, top: 250.0),
-                    child: new Container(
-                        alignment: Alignment.center,
-                        height: 60.0,
-                        child: new Text("Forgot Password?",
-                                            style: new TextStyle(
-                                                fontSize: 17.0, color: Color(0xFF18D191)))),
-                    ),
-                  ),
-                Expanded(
-                    child: new Form(
-                        key: _formKey,
-                        child: Column(
-                            children: <Widget>[
-                              Padding(
-                                padding:
-                                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 0.0),
-
-                                child: new TextFormField(
-                                  decoration: new InputDecoration(labelText: 'Email'),
-                                  validator: (input) {
-                                    if(input.isEmpty){
-                                      return 'Provide an email';
-                                    }
-                                  },
-                                  onSaved:  (input) => _email = input,
-    ),
-                    ),
-                              TextFormField(
-                                decoration: new InputDecoration(labelText: 'Password'),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
+                              child: new TextFormField(
+                                decoration: new InputDecoration(labelText: 'Email'),
                                 validator: (input) {
-                                  if(input.length < 6){
-                                    return 'Password has to be > 6 characthers';
+                                  if(input.isEmpty){
+                                    return 'Provide an email';
                                   }
                                 },
-                                onSaved: (input) => _password = input,
-                                obscureText: true,
-                                )
-                            ]
-                            )
-                        )
+                                onSaved:  (input) => _email = input,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 0.0),
+                            child: TextFormField(
+                              decoration: new InputDecoration(labelText: 'Password'),
+                              validator: (input) {
+                                if(input.length < 6){
+                                  return 'Password has to be > 6 characthers';
+                                }
+                              },
+                              onSaved: (input) => _password = input,
+                              obscureText: true,
+                            ),
+                          )
+                        ]
                     )
-              ],
+                )
+            ),
+
+        new Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, right: 20.0, top: 10.0),
+                child: GestureDetector(
+                  onTap: signIn,
+                  child: new Container(
+                      alignment: Alignment.center,
+                      height: 60.0,
+                      decoration: new BoxDecoration(
+                          color: Color(0xFF18D191),
+                          borderRadius: new BorderRadius.circular(9.0)),
+                      child: new Text("Login",
+                          style: new TextStyle(
+                              fontSize: 20.0, color: Colors.white))),
+                ),
               ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, right: 20.0, top: 10.0),
+                child: new Container(
+                    alignment: Alignment.center,
+                    height: 60.0,
+                    child: new Text("Forgot Password?",
+                        style: new TextStyle(
+                            fontSize: 17.0, color: Color(0xFF18D191)))),
+              ),
+            ),
+
+
           ],
-          ),
         ),
-      );
+      ]
+      ),
+      )
+    );
   }
   Future<void> signIn() async {
     final formState = _formKey.currentState;
