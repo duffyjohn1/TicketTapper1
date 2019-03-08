@@ -64,6 +64,7 @@ class  _LoginPageState extends State<LoginPage> {
                                         ),
                                       labelText: 'Email',
                                       ),
+                                      // Ensure Email in DB
                                     validator: (input) {
                                       if(input.isEmpty){
                                         return 'Provide an email';
@@ -110,14 +111,7 @@ class  _LoginPageState extends State<LoginPage> {
                         padding: const EdgeInsets.only(
                             left: 10.0, right: 20.0, top: 10.0),
                         child: GestureDetector(
-                          onTap: signIn
-                          /*{
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => signIn,
-                                  ));
-                          }*/,
+                          onTap: signIn,
                           child: new Container(
                               alignment: Alignment.center,
                               height: 60.0,
@@ -152,6 +146,7 @@ class  _LoginPageState extends State<LoginPage> {
         );
   }
 
+// Validates with DB
   void signIn() async {
     final formState = _formKey.currentState;
     if (formState.validate()){
