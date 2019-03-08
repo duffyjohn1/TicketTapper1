@@ -38,7 +38,8 @@ Logging in
 
 * * * * *
 
-If the user has already registered then they will be able to login with either they email or their google account. On the left we have the google log in and on the right we have the email login![](images/googlelogin.PNG)![](emaillogin.PNG)
+If the user has already registered then they will be able to login with either they email or their google account. On the left we have the google log in and on the right we have the email login![](images/googlelogin.PNG)
+![](emaillogin.PNG)
 
 Home Page.
 
@@ -79,7 +80,8 @@ Ticket
 
 * * * * *
 
-Once square can confirm that the payment was successful then the user will be transferred onto the qr page which is their ticket.![](images/qrcode.PNG)
+Once square can confirm that the payment was successful then the user will be transferred onto the qr page which is their ticket.
+![](images/qrcode.PNG)
 
 Maps
 
