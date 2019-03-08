@@ -33,6 +33,7 @@ class WelcomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+              // Sets Up Logo
             new Stack(
               alignment: Alignment.center,
               children: <Widget>[
@@ -123,9 +124,8 @@ class WelcomePage extends StatelessWidget {
                         left: 20.0, right: 20.0, top: 10.0),
                     child: GestureDetector(
                       onTap: () {
+                        // Handles Google SignIn
                         handleSignIn();
-
-                        // This attempts to ensure user can only move forward once signed in
                           Navigator.push(
                               context,
                               MaterialPageRoute(
