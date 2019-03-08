@@ -6,7 +6,7 @@ import 'package:tickettapper/InHome/plan_route.dart';
 import 'package:tickettapper/InHome/qr_gen.dart';
 import 'package:tickettapper/Payment/Pay_main.dart';
 import 'package:tickettapper/Payment/widgets/buy_sheet.dart';
-
+.
 class HomePage extends StatefulWidget {
   @override
   HomePageState createState() => new HomePageState();
