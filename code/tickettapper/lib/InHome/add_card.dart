@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tickettapper/Payment/Colors.dart';
 import 'package:tickettapper/Payment/widgets/cookie_button.dart';
 
-
+//Ticket Price
 enum PaymentType { cardPayment, googlePay, applePay }
 final int cookieAmount = 225;
 
