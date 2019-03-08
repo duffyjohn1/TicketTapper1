@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'login.dart';
 import 'signup.dart';
 import 'google_signIn.dart';
@@ -9,6 +10,12 @@ void main() => runApp(TicketTapper());
 class TicketTapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //Sets top app bar to orange  
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+    statusBarColor: Colors.orange, //or set color with: Color(0xFF0000FF)
+     ));
+
+      
     return MaterialApp(
       title: 'TicketTapper',
       debugShowCheckedModeBanner: false,
