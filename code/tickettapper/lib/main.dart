@@ -160,7 +160,7 @@ class WelcomePage extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignUpPage(),
+                              builder: (context) => SignUpPage(), //links the main page to the sign up page
                             ));
                       },
                       child: new Container(
