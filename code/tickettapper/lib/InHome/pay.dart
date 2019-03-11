@@ -27,7 +27,6 @@ class MyNFCState extends State<MyNFC> {
 
   Future<void> startNFC() async {
     sleep(const Duration(seconds:2));
-    Vibrate.vibrate();
     if (this.mounted) {
       setState(() {
         nfcData = NfcData();
