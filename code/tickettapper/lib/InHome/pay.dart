@@ -1,8 +1,10 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'dart:async';
-
 import 'package:flutter/services.dart';
 import 'package:flutter_nfc_reader/flutter_nfc_reader.dart';
+import 'package:vibrate/vibrate.dart';
+
 
 
 
@@ -16,7 +18,7 @@ class MyNFCState extends State<MyNFC> {
   NFCStatus _status;
   var x = 'False';
 
-  //get showOrderSheet => BuySheetState().showOrderSheet();
+
 
   @override
   void initState() {
@@ -24,32 +26,29 @@ class MyNFCState extends State<MyNFC> {
   }
 
   Future<void> startNFC() async {
-    NfcData response;
-
-    setState(() {
-      nfcData = NfcData();
-      nfcData.status = NFCStatus.reading;
-    });
-
+    sleep(const Duration(seconds:2));
+    Vibrate.vibrate();
+    if (this.mounted) {
+      setState(() {
+        nfcData = NfcData();
+        nfcData.status = NFCStatus.reading;
+        print("mounted");
+      });
+    }
     print('NFC: Scan started');
-
-    try {
-      print('NFC: Scan readed NFC tag');
-      response = (await FlutterNfcReader.read) as NfcData;
-    } on PlatformException {
-      print('NFC: Scan stopped exception');
-    }
-    setState(() {
-      nfcData = response;
+    print('NFC tag read');
+    FlutterNfcReader.read.listen((response) {
+      if (this.mounted) {
+        setState(() {
+          nfcData = response;
+        });
+      }
     });
-    if (nfcData != null) {
-      stopNFC();
-    }
+    print(nfcData.id);
   }
 
   Future<void> stopNFC() async {
     NfcData response;
-
 
     try {
       print('NFC: Stop scan by user');
