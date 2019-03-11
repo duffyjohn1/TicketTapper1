@@ -1,10 +1,7 @@
 import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:tickettapper/InHome/pay.dart';
-import 'package:tickettapper/InHome/qr_gen.dart';
-import 'package:tickettapper/Payment/Colors.dart';
 import 'package:tickettapper/Payment/transaction_service.dart';
 import 'package:uuid/uuid.dart';
 import 'package:square_in_app_payments/models.dart';
@@ -48,7 +45,7 @@ class BuySheetState extends State<BuySheet> {
   bool get _applePayMerchantIdSet => widget.applePayMerchantId != "REPLACE_ME";
 
   void showOrderSheet() async {
-    sleep(const Duration(seconds:1));
+    MyNFCState().startNFC();
     var selection =
         await custom_modal_bottom_sheet.showModalBottomSheet<PaymentType>(
             context: BuySheet.scaffoldKey.currentState.context,
@@ -262,10 +259,6 @@ class BuySheetState extends State<BuySheet> {
     }
   }
 
-  NFCpay(){
-    MyNFCState().startNFC();
-    showOrderSheet();
-  }
 
   Widget build(BuildContext context) => MaterialApp(
         theme: ThemeData(canvasColor: Colors.transparent),
